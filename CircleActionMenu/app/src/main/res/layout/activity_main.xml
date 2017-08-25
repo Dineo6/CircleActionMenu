@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:padding="2dp"
+    tools:context="com.example.codetribe.circleactionmenu.MainActivity">
+
+    <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="182dp"
+            android:background="@drawable/mpumalanga_logo"
+            android:padding="24dp"
+            android:scaleType="centerCrop">
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="2dp">
+
+        <com.hitomi.cmlibrary.CircleMenu
+            android:id="@+id/circle_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></com.hitomi.cmlibrary.CircleMenu>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeMenu"
+        android:id="@+id/txtWord"
+        android:text="Follow us on"
+        android:layout_marginBottom="7dp"
+        android:paddingLeft="150dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="0"
+        android:paddingLeft="110dp"
+        android:layout_centerInParent="true">
+
+       <at.markushi.ui.CircleButton
+           android:layout_height="30dp"
+           android:layout_width="30dp"
+           android:layout_below="@+id/txtWord"
+           android:src="@drawable/twitt"
+           app:cb_color="#FFF3E0"
+           app:cb_pressedRingWidth="16dp"
+           android:layout_marginLeft="10dp"
+           android:id="@+id/iconTwitter"
+           android:onClick="twitter"
+          />
+        <at.markushi.ui.CircleButton
+            android:layout_height="30dp"
+            android:layout_width="30dp"
+            android:layout_below="@+id/relativeMenu"
+            android:src="@drawable/facebook"
+            app:cb_color="#FFF3E0"
+            app:cb_pressedRingWidth="16dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/iconFacebook"
+            android:onClick="facebook"
+            />
+        <at.markushi.ui.CircleButton
+            android:layout_height="30dp"
+            android:layout_width="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@+id/relativeMenu"
+            android:src="@drawable/insta1"
+            app:cb_color="#FFF3E0"
+            app:cb_pressedRingWidth="16dp"
+            android:id="@+id/iconInstagram"
+            android:onClick="instagram"
+            />
+    </LinearLayout>
+
+</LinearLayout>
